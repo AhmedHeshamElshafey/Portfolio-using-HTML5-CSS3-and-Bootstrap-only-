@@ -114,7 +114,4 @@ No server required.
 **Ahmed Hesham**  
 Frontend Developer & UI/UX Designer
 
----
 
-## 📜 License
-Released under the **MIT License**.
