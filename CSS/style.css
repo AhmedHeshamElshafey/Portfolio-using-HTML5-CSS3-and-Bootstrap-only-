@@ -1,0 +1,465 @@
+
+:root
+{
+    --color-red:#f44336;
+    --color-gray:#222;
+    --comment-color:#6c757d;
+}
+.comment-color
+{
+    color: var(--comment-color);
+}
+.redcolor
+{
+    color: var(--color-red) !important;
+}
+.graycolor
+{
+    color: var(--color-gray) !important;
+}
+.h-90
+{
+    height: 90%;
+}
+.end-8
+{
+    right: 8%;
+}
+.start-8
+{
+    left: 8%;
+}
+.buttom-8
+{
+    bottom: 8%;
+}
+.top-25
+{
+top:25%;
+}
+.ff-OpenSans
+{
+font-family: OpenSans !important;
+}
+
+.Heading-part
+     {
+        letter-spacing: .56rem;
+        font-weight: 800;
+        height: 50px;
+        overflow: hidden;
+    h2
+     {
+        font-size: 2rem;
+        font-weight: 800;
+     }
+     span
+     {
+        font-size: 4.5rem;
+        color: #f2f2f2;
+     }
+      
+     }
+nav 
+{
+    .nav-link.nav-link.active{
+        color: var( --color-red) !important;
+        text-decoration: underline;
+        text-underline-offset: 11px;
+    }
+    .nav-item{
+        a{
+            transition: all .5s;
+            position: relative;
+        }
+        a::after
+        {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 0px;
+            left:50%;
+            border-bottom: 2px solid var(--color-red);
+            transition: all .5s;
+            
+        }
+        &:hover a{
+          color: var( --color-red) !important;  
+        }
+        &:hover a::after
+        {
+            width: 100%;
+            right: 0%;
+            left: 0%;
+        }
+    }
+}
+#HOME-PAGE{
+    background-image: url(../Images/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    font-family: OpenSans;
+    .heading-name
+    {
+    font-size: 3.4rem;
+    font-weight: 800;
+    }
+    .heading-content
+    {
+       font-size: 1rem; 
+    }
+    a{
+     cursor: pointer;
+    }
+    .icon
+    {
+        width: 3rem;
+        height: 3rem;
+        transition: all .8s;
+        i{
+            font-size: 1.4rem;
+        }
+        &:hover{
+            color: var(--color-red);
+            border-color: var(--color-red) !important;
+        }
+    }
+    .scroll
+    {
+        width: 40px;
+        height: 80px;
+        position: relative;
+        &::after
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #f2f2f2;
+            transform: translate(-50%);
+            animation-name: ball-movement;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+        }
+    }
+    .gear
+    {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+#ABOUT-PAGE
+{
+     font-family: OpenSans;
+     background-image: url(../Images/light_dot.jpg);
+     
+    > p{
+    font-weight: 600 !important;
+    font-size: .8rem;
+    }
+
+    .container
+    {
+        h3{
+            font-weight: 700 ;
+        }
+    }
+
+
+    .image
+    {
+     img
+     {
+         transition: all 1s;
+     }
+    &:hover  img
+    {
+        box-shadow: 1px 1px 51px 21px rgba(198,197,197,0.89);
+        transform: scale(1.1);  
+    }
+    }
+
+}
+#SERVICES-PAGE{
+    background-image: url(../Images/dark_dot.jpg);
+ 
+    .inner
+    {
+        &:hover .icon
+        {
+            transform:translate(-50%, -50%) scale(1.2)  !important;
+            color: var(--color-red) !important;
+        }
+        .icon
+        {
+            transition: all .5s;
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+        .borderdiv
+        {
+            height: 2px;
+            background-color: var(--color-red);
+            width: 15%;
+        }
+    }
+}
+#PORTFOLIO-PAGE
+{
+    cursor: pointer;
+   
+.nav-tabs .nav-link
+{
+    border: none;
+}
+.nav-link
+{
+    color: black;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: var(--color-red);
+    font-weight: 800;
+}
+    .item-image 
+    {
+        img{
+            transition: all .5s;
+        }
+    }
+    .Icons .icon{
+        width: 40px;
+        height: 40px;
+        background-color: var(--color-red);
+    }
+
+    .item
+    {
+        .item-hover
+        {
+            transition: all .5s ;
+
+            .item-hover-content
+            {
+            transition: all .5s .5s;
+            }
+        }
+        &:hover .item-hover{
+            bottom: 10% !important;
+        }
+         &:hover .item-hover-content
+        {
+            opacity: 100% !important;
+        }
+        &:hover .item-image img
+        {
+            transform: scale(1.2);
+        }
+
+    }
+}
+
+#CLINT-PAGE
+{
+    background-image: url(../Images/dark_dot.jpg);
+     
+    .carousel-inner {
+        .client{
+            border-color: var(--comment-color);
+           .image-border
+            {
+                width: 15%;
+                box-sizing: border-box;
+            
+            }
+            p{
+                color: var(--comment-color);
+            }
+            .client-name
+            {
+                position: relative;
+            }
+            .client-name::before
+            {
+                content: "";
+                width: 16px;
+                height: 2px;
+                position: absolute;
+                top: 19%;
+                right: 102%;
+                background-color: var(--color-red);
+            }
+        }
+    }
+ 
+.carousel-indicators [data-bs-target] {
+    background-color: black ;
+}
+}
+
+#PRICE-PAGE
+{
+    background-image: url(../Images/light_dot.jpg);
+    
+     .card{
+        .card-heading
+        {
+            background-color: #212529;
+            span{
+                font-size: 400%;
+            }
+            p::after
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                content: "POPULAR";
+                font-size: 18px;
+                position: absolute;
+                top: 7%;
+                left: 47%;
+                width: 68%;
+                height: 6%;
+                transform: rotate(45deg);
+                color: var(--color-red);
+                background-color: white
+            }
+        }
+        &:hover
+        {
+            box-shadow: 1px 1px 51px 21px rgba(226,226,226,0.89);
+        }
+        transition: all .5s;
+     }
+     .procard
+     {
+        .card-heading{
+         p::after
+         {
+            content: "BEST SELLER";
+         }
+        }
+     }
+
+     .card-body
+     {
+        a{
+            &:hover
+            {
+                background-color: var(--color-red);
+                border: 1px solid var(--color-red);
+            }
+            transition: all .5s;
+        }
+     }
+}
+
+#CONTACT-PAGE
+{
+    
+    background-image: url(../Images/dark_dot.jpg);
+    .data-section{
+        line-height: 20px;
+        .data{
+            padding-top: 3px;
+        }
+    }
+    button{
+        background-color: var(--color-red);
+        transition: all .5s;
+        &:hover
+        {
+            transform: scale(1.1) translate(9px); 
+             
+        }
+    }
+    .data-section
+    {
+        i
+        {
+            transition: all .5s;
+        }
+        &:hover i
+        {
+            transform: scale(1.3) ;
+        }
+    }
+}
+footer
+{
+    background-image: url(../Images/light_dot.jpg);
+}
+@keyframes ball-movement
+{
+    0%{ 
+        top:0;
+        opacity: 0;
+    }
+    30%{
+        top:80%;
+        opacity: 1;
+    }
+    60%
+    {
+        top:20%;
+        opacity: 1;
+    }
+    80%
+    {
+        top:50%;
+        opacity: 1;
+    }
+    90%
+    {
+        top:30%;
+        opacity: 1;
+    }
+    100%
+    {
+         top:40%;
+       opacity: 0; 
+    }
+}
+@media all and (max-width:992px)
+{
+    :root
+    {
+        font-size: 12px;
+    }
+#CLINT-PAGE{
+    .Heading-part{
+    span
+     {
+        font-size: 3.2rem;
+    }
+      .carousel-control-prev
+{
+    left: -3% ;
+}
+
+    .carousel-control-next
+{
+    right:  -2% ;
+}
+}
+  
+}
+#PRICE-PAGE
+{
+ .Category
+ {
+    width: 70%;
+ }
+}
+
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(../Fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
